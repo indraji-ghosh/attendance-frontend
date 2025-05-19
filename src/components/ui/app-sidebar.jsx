@@ -3,6 +3,7 @@ import { PiStudentFill } from "react-icons/pi";
 import { LuChartColumnStacked } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
 import { FaChalkboardTeacher } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 
@@ -58,10 +59,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span className="text-l">{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
